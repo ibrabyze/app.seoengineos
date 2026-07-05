@@ -17,7 +17,181 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+/* ── 
+MODULE BADGE ── */
+.module-badge-wrap{
+  margin:0 auto 32px;
+  max-width:680px;
+  text-align:center;
+}
+.module-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--gold-dim,rgba(245,179,1,0.1));
+  border:1px solid var(--gold-border,rgba(245,179,1,0.3));
+  border-radius:999px;
+  padding:6px 18px;
+  margin-bottom:12px;
+}
+.module-badge-code{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;font-weight:700;
+  color:var(--accent-gold,#F5B301);
+  letter-spacing:0.12em;
+}
+.module-badge-sep{
+  font-size:11px;color:var(--text-muted,#666);
+}
+.module-badge-product{
+  font-size:12px;font-weight:600;
+  color:var(--text-primary,#FAFAFA);
+}
+.module-badge-sub{
+  font-size:13px;color:var(--text-secondary,#888);
+  line-height:1.6;
+}
+.module-badge-sub a{color:var(--accent-gold,#F5B301)}
 
+/* ── RESULTS CALLOUT UPGRADE ── */
+.results-callout-upgrade{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;flex-wrap:wrap;
+  background:var(--gold-dim,rgba(245,179,1,0.06));
+  border:1px solid var(--gold-border,rgba(245,179,1,0.2));
+  border-radius:12px;
+  padding:22px 26px;
+  margin-top:20px;
+}
+.rcu-left{display:flex;align-items:flex-start;gap:14px;flex:1;min-width:200px}
+.rcu-check{
+  flex-shrink:0;
+  font-size:20px;color:var(--accent-green,#22c55e);
+  margin-top:2px;
+}
+.rcu-left strong{
+  display:block;font-size:15px;font-weight:700;
+  color:var(--text-primary,#FAFAFA);margin-bottom:6px;
+}
+.rcu-left p{font-size:13px;color:var(--text-secondary,#888);line-height:1.6;margin:0}
+.rcu-right{display:flex;flex-direction:column;align-items:center;gap:6px;flex-shrink:0}
+.rcu-btn{
+  display:inline-block;
+  background:var(--accent-gold,#F5B301);
+  color:#000;font-weight:700;font-size:14px;
+  padding:12px 22px;border-radius:8px;
+  text-decoration:none;white-space:nowrap;
+  transition:background 0.2s;
+}
+.rcu-btn:hover{background:#FFD045}
+.rcu-note{font-size:11px;color:var(--text-muted,#666);text-align:center}
+
+/* ── NEXT STEP CARD ── */
+.next-step-card{
+  background:var(--bg-surface,#0D1117);
+  border:1px solid var(--border-subtle,#1E2530);
+  border-radius:16px;
+  padding:40px;
+  margin-top:40px;
+}
+.nsc-badge{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--accent-gold,#F5B301);
+  margin-bottom:14px;
+}
+.nsc-headline{
+  font-size:clamp(20px,3vw,28px);font-weight:800;
+  line-height:1.25;margin-bottom:28px;
+}
+.nsc-gold{color:var(--accent-gold,#F5B301)}
+.nsc-steps{display:flex;flex-direction:column;gap:10px;margin-bottom:32px}
+.nsc-step{
+  display:flex;align-items:center;gap:14px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid var(--border-subtle,#1E2530);
+  border-radius:8px;padding:13px 16px;
+}
+.nsc-step.nsc-done{
+  border-color:rgba(34,197,94,0.25);
+  background:rgba(34,197,94,0.04);
+}
+.nsc-step-num{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;font-weight:700;
+  color:var(--text-muted,#555);
+  width:24px;flex-shrink:0;
+}
+.nsc-done .nsc-step-num{color:var(--accent-green,#22c55e)}
+.nsc-step-text{flex:1;font-size:14px;color:var(--text-secondary,#888)}
+.nsc-done .nsc-step-text{color:var(--text-primary,#FAFAFA);font-weight:500}
+.nsc-step-badge{
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  padding:3px 9px;border-radius:20px;white-space:nowrap;
+  background:rgba(34,197,94,0.1);color:var(--accent-green,#22c55e);
+  border:1px solid rgba(34,197,94,0.25);
+}
+.nsc-locked{
+  background:rgba(255,255,255,0.04) !important;
+  color:var(--text-muted,#555) !important;
+  border-color:var(--border-subtle,#1E2530) !important;
+}
+.nsc-cta-row{
+  display:flex;gap:14px;flex-wrap:wrap;
+  padding-top:24px;border-top:1px solid var(--border-subtle,#1E2530);
+}
+.nsc-btn-primary{
+  display:inline-flex;align-items:center;
+  background:var(--accent-gold,#F5B301);
+  color:#000;font-weight:700;font-size:14px;
+  padding:13px 22px;border-radius:8px;
+  text-decoration:none;transition:background 0.2s;
+}
+.nsc-btn-primary:hover{background:#FFD045}
+.nsc-btn-secondary{
+  display:inline-flex;align-items:center;
+  background:transparent;
+  color:var(--text-primary,#FAFAFA);font-size:14px;font-weight:500;
+  padding:13px 22px;border-radius:8px;
+  border:1px solid var(--border-strong,#34384A);
+  text-decoration:none;transition:all 0.2s;
+}
+.nsc-btn-secondary:hover{
+  border-color:var(--gold-border,rgba(245,179,1,0.3));
+  color:var(--accent-gold,#F5B301);
+}
+
+/* ── SEO CONTENT SECTION ── */
+.seo-content-section{
+  border-top:1px solid var(--border-subtle,#1E2530);
+  padding:72px 0;
+  margin-top:0;
+}
+.scs-wrap{
+  max-width:760px;margin:0 auto;
+  padding:0 24px;
+}
+.scs-wrap h2{
+  font-size:clamp(20px,2.8vw,26px);
+  font-weight:700;margin:36px 0 14px;
+  color:var(--text-primary,#FAFAFA);
+  padding-top:36px;border-top:1px solid var(--border-subtle,#1E2530);
+}
+.scs-wrap h2:first-child{margin-top:0;padding-top:0;border-top:none}
+.scs-wrap p{
+  font-size:15px;color:var(--text-secondary,#888);
+  line-height:1.75;margin-bottom:16px;
+}
+.scs-wrap a{color:var(--accent-gold,#F5B301);text-decoration:none}
+.scs-wrap a:hover{text-decoration:underline}
+
+/* ── MOBILE FIXES ── */
+@media(max-width:640px){
+  .results-callout-upgrade{flex-direction:column}
+  .rcu-right{width:100%}
+  .rcu-btn{width:100%;text-align:center}
+  .next-step-card{padding:24px 20px}
+  .nsc-cta-row{flex-direction:column}
+  .nsc-btn-primary,.nsc-btn-secondary{width:100%;justify-content:center}
+}
 <style>
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    DESIGN TOKENS
@@ -1141,6 +1315,20 @@ textarea:focus, input:focus {
     <span class="word">You&nbsp;</span><span class="word">Can&nbsp;</span><span class="word">Actually</span><br>
     <span class="word win-word">Win.</span>
   </h1>
+<div class="module-badge-wrap">
+  <div class="module-badge">
+    <span class="module-badge-code">MODULE 01</span>
+    <span class="module-badge-sep">of</span>
+    <span class="module-badge-product">SEO Content Engine OS™</span>
+  </div>
+  <p class="module-badge-sub">
+    Generate your keywords here. Then use the full 7-module system
+    to turn them into a ranked article in 58 minutes.
+    <a href="https://ibrahimshuaib.com" target="_blank" rel="noopener">
+      See the complete system →
+    </a>
+  </p>
+</div>
 
   <p class="hero-sub">Enter your niche. Get 20 low-competition keywords filtered for new sites with low domain authority — in 60 seconds. Free. No signup. No card.</p>
 
@@ -1302,10 +1490,77 @@ textarea:focus, input:focus {
 
       <div class="results-callout">
         <strong>⭐ Start with your Quick Win keywords</strong> — these have the weakest competition relative to YOUR niche specifically. Target these first before anything else.
-      </div>
+      <div class="results-callout-upgrade">
+  <div class="rcu-left">
+    <span class="rcu-check">✓</span>
+    <div>
+      <strong>You have the keywords.</strong>
+      <p>Most founders stop here. The real challenge is turning
+      those keywords into articles that actually rank — without
+      an agency, without a writer, and without 6 hours per article.</p>
     </div>
   </div>
-</section>
+  <div class="rcu-right">
+    <a href="https://blog.ibrahimshuaib.com/2026/06/27/how-i-write-seo-articles-in-58-minutes.html"
+      target="_blank" rel="noopener"
+      class="rcu-btn">
+      See the exact 58-minute workflow →
+    </a>
+    <p class="rcu-note">Free article — no signup</p>
+  </div>
+</div>
+
+  <section class="next-step-card" id="next-step">
+  <div class="nsc-badge">WHAT HAPPENS NEXT</div>
+  <h2 class="nsc-headline">
+    Most SEO tools stop at keywords.<br>
+    <span class="nsc-gold">Here is what actually gets you ranked.</span>
+  </h2>
+  <div class="nsc-steps">
+    <div class="nsc-step nsc-done">
+      <span class="nsc-step-num">01</span>
+      <span class="nsc-step-text">Find low-competition keywords</span>
+      <span class="nsc-step-badge">✓ Done</span>
+    </div>
+    <div class="nsc-step">
+      <span class="nsc-step-num">02</span>
+      <span class="nsc-step-text">Validate search intent (Module 02)</span>
+      <span class="nsc-step-badge nsc-locked">🔒 Locked</span>
+    </div>
+    <div class="nsc-step">
+      <span class="nsc-step-num">03</span>
+      <span class="nsc-step-text">Analyse competitor gaps (Module 02)</span>
+      <span class="nsc-step-badge nsc-locked">🔒 Locked</span>
+    </div>
+    <div class="nsc-step">
+      <span class="nsc-step-num">04</span>
+      <span class="nsc-step-text">Generate article structure (Module 03)</span>
+      <span class="nsc-step-badge nsc-locked">🔒 Locked</span>
+    </div>
+    <div class="nsc-step">
+      <span class="nsc-step-num">05</span>
+      <span class="nsc-step-text">Draft and optimise content (Module 04)</span>
+      <span class="nsc-step-badge nsc-locked">🔒 Locked</span>
+    </div>
+    <div class="nsc-step">
+      <span class="nsc-step-num">06</span>
+      <span class="nsc-step-text">Distribute across channels (Module 06)</span>
+      <span class="nsc-step-badge nsc-locked">🔒 Locked</span>
+    </div>
+  </div>
+  <div class="nsc-cta-row">
+    <a href="https://blog.ibrahimshuaib.com/2026/06/27/how-i-write-seo-articles-in-58-minutes.html"
+      target="_blank" rel="noopener"
+      class="nsc-btn-secondary">
+      Read the free 58-minute workflow →
+    </a>
+    <a href="https://ibrahimshuaib.com"
+      target="_blank" rel="noopener"
+      class="nsc-btn-primary">
+      Get the full system — $297
+    </a>
+  </div>
+</section>       
 
 <!-- ━━━━━━ MODULE PROGRESSION ━━━━━━ -->
 <section class="section" style="border-top:1px solid var(--border-subtle);">
@@ -1454,7 +1709,78 @@ textarea:focus, input:focus {
     </table>
   </div>
 </section>
+         
+<section class="seo-content-section">
+  <div class="scs-wrap">
 
+    <h2 id="how-to-find-low-competition-keywords">
+      How to find low-competition keywords for a new website
+    </h2>
+    <p>Most keyword research advice is written for established sites
+    with domain authority scores above 40. If your site is under
+    12 months old with fewer than 20 published articles, that advice
+    does not apply to you.</p>
+    <p>Low-competition keywords for new websites share four
+    characteristics: they are four or more words long, they target
+    a specific audience segment rather than a broad topic, the current
+    top results include at least one piece of community content like
+    a Reddit thread or Quora answer, and the ranking pages were
+    published more than 18 months ago without being updated.</p>
+    <p>This tool filters every keyword it generates through those
+    four criteria automatically. The Quick Win flags indicate keywords
+    where a site with low domain authority has a realistic path to
+    page one within 60 to 90 days — based on the weakness of current
+    results, not just the difficulty score.</p>
+
+    <h2 id="what-makes-a-keyword-rankable">
+      What makes a keyword rankable for a solo founder?
+    </h2>
+    <p>A keyword difficulty score measures the average domain authority
+    of pages currently ranking — not whether your specific site can
+    rank. A KD score of 15 can still mean Forbes and HubSpot occupy
+    the top three positions. A KD score of 45 can mean three outdated
+    posts from niche blogs that have not been updated since 2022.</p>
+    <p>The only reliable way to assess rankability is to open an
+    incognito browser window, search the keyword, and scan the top
+    ten results for five signals: community content ranking, results
+    older than two years, pages that do not fully answer the query,
+    thin content under 800 words, and off-niche sites ranking on
+    domain authority alone. Three or more signals means a new site
+    has a genuine path to page one.</p>
+    <p>
+      <a href="https://blog.ibrahimshuaib.com/2026/07/02/keyword-research-without-paying-for-tools.html"
+        target="_blank" rel="noopener">
+        The complete 60-second SERP audit is documented here →
+      </a>
+    </p>
+
+    <h2 id="what-to-do-after-keyword-research">
+      What to do after keyword research
+    </h2>
+    <p>Keyword research is step one of seven. The gap between having
+    a keyword and having a ranked article is where most solo founders
+    lose momentum — switching between tools, rewriting outlines,
+    producing drafts that read like AI wrote them, and publishing
+    articles that generate eleven impressions in 90 days.</p>
+    <p>The SEO Content Engine OS closes that gap. It is a 7-module
+    Notion system with 28 AI prompts that takes the keyword you just
+    identified and runs it through competitor gap analysis, article
+    structure generation, section-by-section drafting, on-page
+    optimisation, and multi-channel distribution — in under 60 minutes.</p>
+    <p>
+      <a href="https://blog.ibrahimshuaib.com/2026/06/27/how-i-write-seo-articles-in-58-minutes.html"
+        target="_blank" rel="noopener">
+        See the complete workflow running on a real article →
+      </a>
+    </p>
+    <p>
+      <a href="https://ibrahimshuaib.com" target="_blank" rel="noopener">
+        Get the full SEO Content Engine OS™ →
+      </a>
+    </p>
+
+  </div>
+</section>
 <!-- ━━━━━━ FOOTER ━━━━━━ -->
 <footer class="footer">
   <div class="footer-brand">SEO Content Engine OS™</div>
