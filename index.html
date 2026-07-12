@@ -434,6 +434,507 @@ textarea:focus, input:focus { border-color: var(--accent-gold); box-shadow: 0 0 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
+/* ═══════════════════════════════════════════════════════════════
+   VIABILITY GATE BRAND-ALIGNED STYLES
+   ═══════════════════════════════════════════════════════════════ */
+.gate-section {
+  border-top: 1px solid var(--border);
+  padding: 72px 0;
+  position: relative;
+  z-index: 1;
+}
+.gate-explainer {
+  max-width: 760px;
+  margin: 0 auto 48px;
+}
+.gate-explainer-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+.gate-explainer-icon {
+  font-size: 32px;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 4px;
+  opacity: 0.6;
+}
+.gate-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin-bottom: 8px;
+}
+.gate-explainer-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+.gate-explainer-lead {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 28px;
+  border-left: 3px solid var(--red);
+  padding-left: 16px;
+}
+.gate-problem-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+.gate-problem-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background: rgba(201,106,85,0.04);
+  border: 1px solid rgba(201,106,85,0.15);
+  border-radius: var(--r-sm);
+  padding: 18px 20px;
+}
+.gate-problem-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--red);
+  flex-shrink: 0;
+  margin-top: 2px;
+  opacity: 0.7;
+}
+.gate-problem-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+.gate-problem-text strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14.5px;
+}
+.gate-solution-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 26px 28px;
+}
+.gate-solution-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 12px;
+}
+.gate-solution-text {
+  font-size: 14.5px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.gate-solution-text em {
+  color: var(--text-primary);
+  font-style: normal;
+  font-weight: 600;
+}
+.gate-verdicts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.gate-verdict {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: var(--r-sm);
+  font-size: 13.5px;
+}
+.gate-verdict-icon {
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.gate-verdict div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.gate-verdict strong {
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 700;
+}
+.gate-verdict span {
+  color: var(--text-secondary);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+.gate-verdict-go {
+  background: var(--green-dim);
+  border: 1px solid var(--green-border);
+}
+.gate-verdict-conditional {
+  background: var(--brass-dim);
+  border: 1px solid var(--brass-border);
+}
+.gate-verdict-no {
+  background: rgba(201,106,85,0.06);
+  border: 1px solid rgba(201,106,85,0.18);
+}
+.gate-solution-footnote {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.gate-locked-card {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+.gate-locked-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 24px 28px;
+  border-bottom: 1px solid var(--border);
+  gap: 16px;
+}
+.gate-locked-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brass-bright);
+  background: var(--brass-dim);
+  border: 1px solid var(--brass-border);
+  padding: 3px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.gate-locked-title {
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+.gate-locked-sub {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+.gate-locked-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.gate-locked-icon {
+  font-size: 28px;
+  opacity: 0.6;
+}
+.gate-locked-status-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+.gate-mock {
+  position: relative;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-2);
+}
+.gate-mock-header {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 11px 18px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255,255,255,0.01);
+}
+.gate-mock-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.gate-mock-dot-red    { background: var(--red); }
+.gate-mock-dot-amber  { background: var(--brass); }
+.gate-mock-dot-green  { background: var(--green); }
+.gate-mock-title {
+  flex: 1;
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.gate-mock-body {
+  padding: 20px 24px;
+  filter: blur(2px);
+  opacity: 0.35;
+  user-select: none;
+  pointer-events: none;
+}
+.gate-mock-field {
+  margin-bottom: 16px;
+}
+.gate-mock-field-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 5px;
+}
+.gate-mock-field-value {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-family: 'JetBrains Mono', monospace;
+}
+.gate-mock-checks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.gate-mock-check {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 12px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.gate-mock-check-icon { font-size: 13px; }
+.gate-mock-check-label { flex: 1; font-size: 12px; color: var(--text-secondary); }
+.gate-mock-check-result {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.gate-mock-verdict {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 14px 16px;
+}
+.gate-mock-verdict-label {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.gate-mock-verdict-blur {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--green);
+  letter-spacing: 0.04em;
+}
+.gate-mock-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(10,11,14,0.4) 20%,
+    rgba(10,11,14,0.92) 55%,
+    var(--bg) 85%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gate-mock-overlay-content {
+  text-align: center;
+  padding: 0 24px;
+}
+.gate-mock-lock-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+  opacity: 0.7;
+}
+.gate-mock-overlay-title {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+.gate-mock-overlay-sub {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 22px;
+  max-width: 380px;
+}
+.gate-unlock-btn {
+  display: inline-block;
+  background: var(--brass);
+  color: #0A0B0E;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 14px 28px;
+  border-radius: var(--r-sm);
+  text-decoration: none;
+  transition: all 0.2s var(--ease);
+  margin-bottom: 12px;
+}
+.gate-unlock-btn:hover {
+  background: var(--brass-bright);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 28px rgba(218,159,76,0.25);
+}
+.gate-mock-overlay-guarantee {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.gate-os-preview {
+  padding: 24px 28px;
+}
+.gate-os-preview-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+.gate-os-modules {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.gate-os-module {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+  border-radius: var(--r-sm);
+  font-size: 13.5px;
+}
+.gate-os-module-done {
+  background: var(--green-dim);
+  border: 1px solid var(--green-border);
+}
+.gate-os-module-locked {
+  background: rgba(255,255,255,0.01);
+  border: 1px solid var(--border);
+}
+.gate-os-module-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  width: 28px;
+  flex-shrink: 0;
+  color: var(--text-muted);
+}
+.gate-os-module-done .gate-os-module-num { color: var(--green); }
+.gate-os-module-name {
+  flex: 1;
+  color: var(--text-secondary);
+}
+.gate-os-module-done .gate-os-module-name {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+.gate-os-module-status {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.gate-os-module-status.done {
+  background: var(--green-dim);
+  color: var(--green);
+  border: 1px solid var(--green-border);
+}
+.gate-os-module-status.locked {
+  background: rgba(255,255,255,0.02);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+.gate-os-cta-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.gate-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  background: var(--brass);
+  color: #0A0B0E;
+  font-weight: 600;
+  font-size: 14.5px;
+  padding: 14px 24px;
+  border-radius: var(--r-sm);
+  text-decoration: none;
+  transition: all 0.2s var(--ease);
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+}
+.gate-cta-primary:hover {
+  background: var(--brass-bright);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 28px rgba(218,159,76,0.25);
+}
+.gate-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 14px 20px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border-strong);
+  text-decoration: none;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.gate-cta-secondary:hover {
+  border-color: var(--brass-border);
+  color: var(--brass-bright);
+}
+.gate-os-cta-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.6;
+}
+@media (max-width: 640px) {
+  .gate-explainer-header { flex-direction: column; gap: 12px; }
+  .gate-locked-header { flex-direction: column; }
+  .gate-locked-status { flex-direction: row; align-items: center; gap: 8px; }
+  .gate-os-cta-row { flex-direction: column; }
+  .gate-cta-primary, .gate-cta-secondary { width: 100%; justify-content: center; }
+  .gate-os-preview { padding: 20px; }
+  .gate-locked-header { padding: 20px; }
+}
 </style>
 </head>
 <body>
@@ -784,6 +1285,130 @@ textarea:focus, input:focus { border-color: var(--accent-gold); box-shadow: 0 0 
     <a href="https://blog.ibrahimshuaib.com" target="_blank" rel="noopener">Blog</a>
   </div>
   <div class="footer-trust">🔒 No data stored · No cookies · No tracking · Built by Ibrahim Shuaib · © 2026</div>
+<!-- ── MODULE 1.3 VIABILITY GATE TEASER ── -->
+<section class="gate-section" id="gate-section" style="display:none;">
+  <div class="wrap">
+    <div class="gate-explainer">
+      <div class="gate-explainer-header">
+        <div class="gate-explainer-icon">⊘</div>
+        <div>
+          <div class="gate-eyebrow">MODULE 1.3 · VIABILITY GATE</div>
+          <h2 class="gate-explainer-title">Why most keyword research fails at the wrong moment</h2>
+        </div>
+      </div>
+      <div class="gate-explainer-body">
+        <p class="gate-explainer-lead">You now have 20 keywords. This is where most solo founders make the most expensive mistake in SEO — they pick one and start writing.</p>
+        <div class="gate-problem-cards">
+          <div class="gate-problem-card">
+            <div class="gate-problem-num">01</div>
+            <div class="gate-problem-text">
+              <strong>The keyword difficulty number lies to new sites.</strong>
+              A KD score of 12 does not mean you can rank. It means the average domain authority of ranking pages is low. Forbes can have a page with domain authority 92 pulling that average down. You still cannot displace it.
+            </div>
+          </div>
+          <div class="gate-problem-card">
+            <div class="gate-problem-num">02</div>
+            <div class="gate-problem-text">
+              <strong>You discover the article cannot rank after writing it.</strong>
+              60 minutes invested. 2,400 words written. Published. Then Google Search Console shows 11 impressions in 90 days. The keyword was unwinnable before word one was typed. Nobody told you.
+            </div>
+          </div>
+          <div class="gate-problem-card">
+            <div class="gate-problem-num">03</div>
+            <div class="gate-problem-text">
+              <strong>The SERP tells you everything — but only if you know what to look for.</strong>
+              Is community content like Reddit or Quora ranking on page one? Are the top results older than 18 months? Do they actually answer the query? Three signals like these mean a new site can compete. Zero signals mean move on.
+            </div>
+          </div>
+        </div>
+        <div class="gate-solution-block">
+          <div class="gate-solution-label">THE SOLUTION</div>
+          <p class="gate-solution-text">The Viability Gate runs a structured analysis on your chosen keyword <em>before you write a single word</em>. It analyses the real SERP, checks the five ranking signals that actually matter for a new site, evaluates the content gap opportunity, assesses the E-E-A-T requirement, and issues one clear verdict:</p>
+          <div class="gate-verdicts">
+            <div class="gate-verdict gate-verdict-go">
+              <span class="gate-verdict-icon">✅</span>
+              <div><strong>GO</strong><span>Write this article now — here is your specific angle and timeline</span></div>
+            </div>
+            <div class="gate-verdict gate-verdict-conditional">
+              <span class="gate-verdict-icon">⚡</span>
+              <div><strong>GO WITH CONDITIONS</strong><span>Winnable — but only with this specific angle no one is covering</span></div>
+            </div>
+            <div class="gate-verdict gate-verdict-no">
+              <span class="gate-verdict-icon">❌</span>
+              <div><strong>NO-GO</strong><span>Skip this keyword — here is when to revisit and what to write instead</span></div>
+            </div>
+          </div>
+          <p class="gate-solution-footnote">3 minutes to run the Gate. 60 minutes saved every time it returns a NO-GO. One failed article prevented pays for the entire system.</p>
+        </div>
+      </div>
+    </div>
+    <div class="gate-locked-card">
+      <div class="gate-locked-header">
+        <div class="gate-locked-header-left">
+          <span class="gate-locked-badge">MODULE 1.3</span>
+          <h3 class="gate-locked-title">Keyword Viability Gate</h3>
+          <p class="gate-locked-sub">Select your Quick Win keyword above → run the Gate → get your GO / NO-GO verdict before writing</p>
+        </div>
+        <div class="gate-locked-status">
+          <div class="gate-locked-icon">🔒</div>
+          <div class="gate-locked-status-text">LOCKED</div>
+        </div>
+      </div>
+      <div class="gate-mock">
+        <div class="gate-mock-header">
+          <span class="gate-mock-dot gate-mock-dot-red"></span>
+          <span class="gate-mock-dot gate-mock-dot-amber"></span>
+          <span class="gate-mock-dot gate-mock-dot-green"></span>
+          <span class="gate-mock-title font-mono">viability-gate.analysis</span>
+        </div>
+        <div class="gate-mock-body">
+          <div class="gate-mock-field">
+            <div class="gate-mock-field-label">TARGET KEYWORD</div>
+            <div class="gate-mock-field-value" id="gate-keyword-preview">your chosen quick win keyword</div>
+          </div>
+          <div class="gate-mock-checks">
+            <div class="gate-mock-check"><span class="gate-mock-check-icon">🔒</span><span class="gate-mock-check-label">SERP intent match</span><span class="gate-mock-check-result">—</span></div>
+            <div class="gate-mock-check"><span class="gate-mock-check-icon">🔒</span><span class="gate-mock-check-label">Competition reality check</span><span class="gate-mock-check-result">—</span></div>
+            <div class="gate-mock-check"><span class="gate-mock-check-icon">🔒</span><span class="gate-mock-check-label">Content gap scan</span><span class="gate-mock-check-result">—</span></div>
+            <div class="gate-mock-check"><span class="gate-mock-check-icon">🔒</span><span class="gate-mock-check-label">E-E-A-T requirement</span><span class="gate-mock-check-result">—</span></div>
+            <div class="gate-mock-check"><span class="gate-mock-check-icon">🔒</span><span class="gate-mock-check-label">Ranking timeline</span><span class="gate-mock-check-result">—</span></div>
+          </div>
+          <div class="gate-mock-verdict">
+            <div class="gate-mock-verdict-label font-mono">VIABILITY VERDICT</div>
+            <div class="gate-mock-verdict-value"><span class="gate-mock-verdict-blur">██████ ██████████ ██████</span></div>
+          </div>
+        </div>
+        <div class="gate-mock-overlay">
+          <div class="gate-mock-overlay-content">
+            <div class="gate-mock-lock-icon">🔒</div>
+            <div class="gate-mock-overlay-title">Unlock Module 1.3</div>
+            <div class="gate-mock-overlay-sub">Get the full Viability Gate inside the SEO Content Engine OS™ with all 7 modules and 28 AI prompts</div>
+            <a href="https://ibrahimshuaibseo.gumroad.com" target="_blank" rel="noopener" class="gate-unlock-btn">Unlock the Full OS — $297 →</a>
+            <div class="gate-mock-overlay-guarantee">30-day guarantee · One-time payment · Lifetime access</div>
+          </div>
+        </div>
+      </div>
+      <div class="gate-os-preview">
+        <div class="gate-os-preview-label font-mono">WHAT UNLOCKS WITH THE FULL OS</div>
+        <div class="gate-os-modules">
+          <div class="gate-os-module gate-os-module-done"><span class="gate-os-module-num">01</span><span class="gate-os-module-name">Keyword Intelligence</span><span class="gate-os-module-status done">✓ Free</span></div>
+          <div class="gate-os-module gate-os-module-locked"><span class="gate-os-module-num">1.3</span><span class="gate-os-module-name">Viability Gate</span><span class="gate-os-module-status locked">🔒</span></div>
+          <div class="gate-os-module gate-os-module-locked"><span class="gate-os-module-num">02</span><span class="gate-os-module-name">SERP Intelligence + Brief</span><span class="gate-os-module-status locked">🔒</span></div>
+          <div class="gate-os-module gate-os-module-locked"><span class="gate-os-module-num">03</span><span class="gate-os-module-name">Article Writing System</span><span class="gate-os-module-status locked">🔒</span></div>
+          <div class="gate-os-module gate-os-module-locked"><span class="gate-os-module-num">04</span><span class="gate-os-module-name">On-Page SEO Optimizer</span><span class="gate-os-module-status locked">🔒</span></div>
+          <div class="gate-os-module gate-os-module-locked"><span class="gate-os-module-num">05</span><span class="gate-os-module-name">Content Refresh Engine</span><span class="gate-os-module-status locked">🔒</span></div>
+          <div class="gate-os-module gate-os-module-locked"><span class="gate-os-module-num">06</span><span class="gate-os-module-name">Distribution Engine</span><span class="gate-os-module-status locked">🔒</span></div>
+          <div class="gate-os-module gate-os-module-locked"><span class="gate-os-module-num">07</span><span class="gate-os-module-name">90-Day Strategy Planner</span><span class="gate-os-module-status locked">🔒</span></div>
+        </div>
+        <div class="gate-os-cta-row">
+          <a href="https://ibrahimshuaibseo.gumroad.com" target="_blank" rel="noopener" class="gate-cta-primary">Get the Full SEO Content Engine OS™ — $297</a>
+          <a href="https://blog.ibrahimshuaib.com/2026/06/27/how-i-write-seo-articles-in-58-minutes.html" target="_blank" rel="noopener" class="gate-cta-secondary">See real dynamic article flow →</a>
+        </div>
+        <div class="gate-os-cta-meta">One-time payment · Lifetime access · 30-day money-back guarantee · No subscription</div>
+      </div>
+    </div>
+  </div>
+</section>
 </footer>
 
 <div class="sticky-cta" id="stickyCta">
@@ -974,6 +1599,7 @@ function renderResults(keywords) {
     cards.appendChild(card);
   });
   wrap.style.display = 'block';
+ showGateSection(keywords);
 }
 
 let retryTimer = null;
@@ -1055,6 +1681,36 @@ try {
 } catch(e) {}
 
 document.getElementById('audience').addEventListener('keydown', e => { if (e.key === 'Enter') generateKeywords(); });
+/* Show gate section after results render + populate keyword preview */
+function showGateSection(keywords) {
+  var gateSection = document.getElementById('gate-section');
+  if (!gateSection) return;
+
+  var quickWinKeyword = null;
+  if (keywords && keywords.length) {
+    for (var i = 0; i < keywords.length; i++) {
+      if (keywords[i].isQuickWin || keywords[i].quick_win) {
+        quickWinKeyword = keywords[i].keyword;
+        break;
+      }
+    }
+    if (!quickWinKeyword) quickWinKeyword = keywords[0].keyword;
+  }
+
+  var previewEl = document.getElementById('gate-keyword-preview');
+  if (previewEl && quickWinKeyword) {
+    previewEl.textContent = quickWinKeyword;
+  }
+
+  gateSection.style.display = 'block';
+  gateSection.style.opacity = '0';
+  gateSection.style.transform = 'translateY(16px)';
+  gateSection.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  setTimeout(function() {
+    gateSection.style.opacity = '1';
+    gateSection.style.transform = 'translateY(0)';
+  }, 80);
+}
 </script>
 </body>
 </html>
